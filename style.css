@@ -16,17 +16,21 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: var(--bg);
     color: var(--text);
     width: 100%;
-    min-height: 100svh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -34,15 +38,19 @@ body {
     width: 100%;
     max-width: 440px;
     min-width: 0;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: clamp(28px, 6vh, 56px) 26px calc(clamp(24px, 5vh, 48px) + env(safe-area-inset-bottom));
+    gap: clamp(8px, 1.7svh, 18px);
+    padding: clamp(14px, 2.4svh, 34px) 26px calc(clamp(14px, 2.4svh, 34px) + env(safe-area-inset-bottom));
 }
 
 .photo {
-    width: clamp(150px, 46vw, 210px);
+    width: auto;
+    height: clamp(150px, 26svh, 250px);
     max-width: 100%;
     aspect-ratio: 3 / 4;
     border-radius: 22px;
@@ -64,24 +72,22 @@ body {
 }
 
 .name {
-    margin-top: clamp(18px, 3.2vh, 28px);
-    font-size: clamp(30px, 8.5vw, 40px);
+    font-size: clamp(26px, 5svh, 40px);
     font-weight: 800;
     letter-spacing: -0.015em;
     line-height: 1.05;
 }
 
 .role {
-    margin-top: clamp(10px, 1.8vh, 16px);
-    font-size: clamp(15px, 4.1vw, 19px);
+    font-size: clamp(14px, 2.5svh, 19px);
     font-weight: 500;
     color: var(--muted);
     line-height: 1.32;
 }
 
 .lead {
-    margin-top: clamp(18px, 3vh, 28px);
-    font-size: clamp(16px, 4.4vw, 20px);
+    margin-top: clamp(4px, 1svh, 12px);
+    font-size: clamp(15px, 2.7svh, 20px);
     font-weight: 700;
     line-height: 1.35;
 }
@@ -94,18 +100,17 @@ body {
     list-style: none;
     text-align: left;
     width: 100%;
-    margin-top: clamp(14px, 2.4vh, 22px);
     display: flex;
     flex-direction: column;
-    gap: clamp(12px, 2vh, 18px);
+    gap: clamp(8px, 1.7svh, 18px);
 }
 
 .benefits li {
     position: relative;
     padding-left: 22px;
-    font-size: clamp(15px, 4.1vw, 19px);
+    font-size: clamp(14px, 2.5svh, 19px);
     font-weight: 500;
-    line-height: 1.32;
+    line-height: 1.3;
     color: #4a4844;
 }
 
@@ -121,7 +126,7 @@ body {
 }
 
 .cta {
-    margin-top: clamp(22px, 4vh, 36px);
+    margin-top: clamp(6px, 1.6svh, 18px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -129,11 +134,11 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: 800;
-    font-size: clamp(15px, 4vw, 17px);
+    font-size: clamp(14px, 2.3svh, 17px);
     letter-spacing: 0.04em;
     line-height: 1.15;
     background: var(--brown);
-    padding: clamp(12px, 1.8vh, 15px) clamp(32px, 9vw, 44px);
+    padding: clamp(11px, 1.7svh, 15px) clamp(32px, 9vw, 44px);
     border-radius: 18px;
     box-shadow: 0 12px 26px rgba(90, 73, 56, 0.28);
     transition: transform 0.15s ease, background 0.15s ease;
